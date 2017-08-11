@@ -1,0 +1,9 @@
+<script type="text/javascript" src="#getJsPath('easyui/jquery.min.js')"></script>
+<script type="text/javascript" src="#getJsPath('easyui/jquery.easyui.min.js')"></script>
+<script type="text/javascript" src="#getJsPath('easyui/locale/easyui-lang-zh_CN.js')"></script>
+<script type="text/javascript" src="#getJsPath('jquery/jquery.json.js')"></script>
+<script type="text/javascript" src="#getJsPath('jquery/jquery.validate.ext.js')"></script>
+<script type="text/javascript" src="#getJsPath('jquery/jquery.easyui.ext.js')"></script>
+<script type="text/javascript" src="#getJsPath('jquery/jquery.combogrid.ext.js')"></script>
+<script type="text/javascript" src="#getJsPath('common/uenpay.custom.js')"></script>
+<script type="text/javascript" src="#getJsPath('jquery/jquery.easyui.combo.ext.js')"></script>

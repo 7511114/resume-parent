@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>#if($page_title) $page_title #else 上海尤恩信息技术有限公司#end</title>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    #parse("/control/meta.vm")
+</head>
+<body class="easyui-layout">
+    <div id="divHeader" data-options="region:'north',border:false">#parse("layout/header.vm")</div>  ##顶部面板
+    <div id="divMenuBar" data-options="region:'west',split:true,collapsed:false,title:'菜单栏'">#parse("layout/menu.vm")</div>  ##左部面板
+    <div id="divFooter" data-options="region:'south',border:false">#parse("layout/footer.vm")</div>  ##底部面板
+    <div id="divContent" data-options="region:'center',title:false">  ##内容区
+        <div id="index_menu_tabs" class="easyui-tabs" data-options="fit:true,border:false">
+            <div id="divTitleBar" title="公告栏" data-options="href:''">
+				<link type="text/css" rel="stylesheet" href="#getCssPath('system_list.css')"/>
+                <!-- Main content -->
+                <section class="content">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">平台运行环境</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body table-responsive no-padding">
+                          <table class="table table-hover table- ">
+                            <tbody>
+                            #foreach($!row in $!rows)
+                            <tr>
+                              <th>$!{row[0]}</th>
+                              <td>$!{row[1]}</td>
+                            </tr>
+                            #end
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- /.box-body -->
+                      </div>
+                      <!-- /.box -->
+                    </div>
+                  </div>
+                
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="index_opt_menu" class="easyui-menu"  style="width:120px;">
+    	<div data-options="name:'close',iconCls:'icon-cut'">关闭<font color="red">当前</font>标签</div>
+		  <div data-options="name:'closeRight',iconCls:'icon-redo'">关闭<font color="red">右</font>侧标签</div>
+		  <div data-options="name:'closeLeft',iconCls:'icon-undo'">关闭<font color="red">左</font>侧标签</div>
+		  <div data-options="name:'closeOther',iconCls:'icon-filter'">关闭<font color="red">其他</font>标签</div>
+		  <div data-options="name:'closeAll',iconCls:'icon-clear'">关闭<font color="red">所有</font>标签</div>
+    </div>
+</body>
+</html>

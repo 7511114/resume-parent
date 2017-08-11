@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.bing.resume.web.controllerr" >
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+	</context:component-scan>
+
+	<mvc:default-servlet-handler default-servlet-name="default" />
+	
+	<!-- 校验器validator -->
+	<import resource="dispatcher-validator-servlet.xml" />
+	<!-- 拦截器配置 -->
+	<!-- <import resource="dispatcher-interceptor-servlet.xml" /> -->
+   	<!-- 视图解析配置 -->
+	<import resource="dispatcher-view-servlet.xml" />
+	
+	<!-- 前端相关配置，比如上传图片，自定义异常处理,Controller层的处理 -->
+	<import resource="dispatcher-mvc-servlet.xml" />
+</beans>

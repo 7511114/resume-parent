@@ -1,0 +1,4 @@
+#parse("/control/javascript.vm")
+<script>
+	var basePath = "$rc.contextPath";
+</script>

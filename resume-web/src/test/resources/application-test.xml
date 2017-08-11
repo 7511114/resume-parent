@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" default-autowire="no">
+       
+<!--     <bean name="sampleService" class="com.istock.base.httpService.client.HttpProxyFactoryCglib">
+    	<property name="targetClass" value="com.senvon.sample.SampleService"></property>
+    	<property name="endPoint" value="http://localhost:18080/sample"></property>
+    </bean> -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="properties" ref="globalConfigureProperties"/>
+	</bean>
+
+	<!-- 配置全局属性 -->
+	<bean id="globalConfigureProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="singleton" value="true" />
+		<property name="locations">
+			<list>
+				<value>file:${user.home}/uenpay/im/im-configure.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="imageDataOperationUtil" class="com.uenpay.image.upload.util.ImageDataOperationUtil">
+		<property name="sourceIdent" value="123456"/>
+		<property name="requestUrl" value="http://192.168.1.232/resource"/>
+	</bean>
+	<import resource="spring-dao.xml"/>
+	<import resource="manage/dubbo-manage-consumer.xml"/>
+	<import resource="dubbo-im-provider.xml"/>
+	<import resource="scanpay/dubbo-scanpay-consumer.xml"/> 
+	<import resource="im/dubbo-im-risk-consumer.xml"/>
+	<import resource="spring-service.xml"/>
+	<import resource="jedis-cluster-config.xml"/>
+	<import resource="spring-datasource.xml"/>
+	<import resource="spring-transaction.xml"/>
+	
+     <bean id="dataSource"  
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://192.168.1.234:3306/uenpay_account?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;useSSL=true" />
+        <property name="username" value="uenpay_im" />
+        <property name="password" value="qwer1234" />
+    </bean>
+    
+    <tx:annotation-driven />
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+</beans>

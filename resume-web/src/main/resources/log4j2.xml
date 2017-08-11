@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- monitorInterval="600" 600监控 -->
+<Configuration status="OFF" name="resume" >
+
+    <Properties>
+        <!-- 日志文件名称 -->
+        <Property name="LOG_PROJECT_NAME">resume</Property>
+        <!-- 配置日志文件输出目录 -->
+        <Property name="LOG_HOME">/logs/${LOG_PROJECT_NAME}</Property>
+        <!-- 格式化日志输出格式 - %msg%xEx%n -->
+        <Property name="LOG_PATTERN_LAYOUT">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %t %c{1}:%L %M - %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!--这个输出控制台的配置-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- 控制台只输出level及以上级别的信息(onMatch),其他的直接拒绝(onMismatch) -->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!-- 输出日志的格式 -->
+            <PatternLayout pattern="${LOG_PATTERN_LAYOUT}"/>
+        </Console>
+
+        <!-- 设置日志格式并配置日志压缩格式(im-account.log.年份.gz) -->
+        <RollingFile name="rollingFile_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/${LOG_PROJECT_NAME}.log"
+                                 filePattern="${LOG_HOME}/${LOG_PROJECT_NAME}.log.%d{yyyy-MM-dd}.log.gz">
+                                 
+            <PatternLayout>
+                <pattern>${LOG_PATTERN_LAYOUT}</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true" />
+                <SizeBasedTriggeringPolicy size="80 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy min="1"  max="88" />
+        </RollingFile>
+
+
+        <!-- DEBUG日志格式 -->
+        <RollingFile name="rollingFile_error_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/${LOG_PROJECT_NAME}_error.log"
+                                 filePattern="${LOG_HOME}/${LOG_PROJECT_NAME}.log.%d{yyyy-MM-dd}.error.gz">
+            <PatternLayout>
+                <pattern>${LOG_PATTERN_LAYOUT}</pattern>
+            </PatternLayout>
+             <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true" />
+                <SizeBasedTriggeringPolicy size="80 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy min="1"  max="88" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 配置日志的根节点 -->
+        <root level="DEBUG">
+        <!-- 	<appender-ref ref="Console"/> -->
+            <appender-ref ref="rollingFile_appender" level="debug"/>
+            <appender-ref ref="rollingFile_error_appender" level="error"/>
+        </root>
+    </Loggers>
+
+</Configuration>

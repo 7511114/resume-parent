@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- monitorInterval="600" 600监控 -->
+<Configuration status="WARN" name="resume" >
+
+    <Properties>
+        <!-- 配置日志文件输出目录 -->
+        <Property name="LOG_HOME">D:/downloads/logs</Property>
+        <!-- 格式化日志输出格式 - %msg%xEx%n -->
+        <Property name="LOG_PATTERN_LAYOUT">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %t %c{1}:%L %M - %msg%n</Property>
+        <!-- 日志文件名称 -->
+        <Property name="LOG_PROJECT_NAME">resume</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!--这个输出控制台的配置-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- 控制台只输出level及以上级别的信息(onMatch),其他的直接拒绝(onMismatch) -->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!-- 输出日志的格式 -->
+            <PatternLayout pattern="${LOG_PATTERN_LAYOUT}"/>
+        </Console>
+
+        <!-- DEBUG日志格式 -->
+        <RollingRandomAccessFile name="rollingFile_debug_appender"
+                                 immediateFlush="false" fileName="${LOG_HOME}/${LOG_PROJECT_NAME}_debug.log"
+                                 filePattern="${LOG_HOME}/${LOG_PROJECT_NAME}.log.%d{yyyy-MM-dd}.debug.gz">
+            <PatternLayout>
+                <pattern>${LOG_PATTERN_LAYOUT}</pattern>
+            </PatternLayout>
+             <Policies>
+                <TimeBasedTriggeringPolicy interval="24" modulate="true" />
+                <SizeBasedTriggeringPolicy size="80 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy min="1"  max="88" />
+        </RollingRandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 配置日志的根节点 -->
+        <root level="debug">
+        	<appender-ref ref="Console"/>
+        <!--  <appender-ref ref="rollingFile_debug_appender" level="debug"/> -->
+        </root>
+        
+        <!-- 第三方日志系统 -->
+     <!--    <logger name="org.springframework.core" level="info"/>
+        <logger name="org.springframework.beans" level="info"/>
+        <logger name="org.springframework.context" level="info"/>
+        <logger name="org.springframework.web" level="info"/>
+        <logger name="org.jboss.netty" level="warn"/>
+        <logger name="org.apache.http" level="warn"/> -->
+
+    </Loggers>
+
+</Configuration>

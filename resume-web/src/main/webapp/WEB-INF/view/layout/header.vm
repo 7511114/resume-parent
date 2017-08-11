@@ -1,0 +1,42 @@
+ <div class="header1">
+        <div class="header2">
+            <div class="logo">
+                <strong>上海尤恩后台im系统</strong>
+            </div>
+            <div class="contact">
+                <div class="prompt">
+                    <span></span>
+                </div>
+                <div class="headerMenu">
+                    <ul>
+                        <li><a href="logOut" class="easyui-linkbutton" data-options="plain:true" onclick="confirm('您是否要退出系统？');">安全退出</a></li>
+                        <li><a href="#" class="easyui-menubutton" data-options="menu:'#mm1'">您好，$!{login_session_user_info.userReallyName}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mm1">
+        <div onclick="addNewTab('个人设置', 'BulletinBoard.html');">个人设置</div>
+        <div onclick="addNewTab('个人菜单', 'BulletinBoard.html');">个人菜单</div>
+    </div>
+		
+<script >
+var today = new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六'); 
+
+ jQuery(function(){
+			jQuery("div.contact .prompt span").html(currentTime1());
+        });
+
+
+    	//显示当前时间
+        function currentTime1(){ 
+        			    var d=new Date(),str=''; 
+						var week = today[d.getDay()];
+        			    str+=d.getFullYear()+'年'; 
+        			    str+=d.getMonth() + 1+'月'; 
+        			    str+=d.getDate()+'日 '; 
+						 str+=week; 
+        			    return str; 
+        }
+</script>

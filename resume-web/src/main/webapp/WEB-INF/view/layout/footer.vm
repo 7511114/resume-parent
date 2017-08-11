@@ -1,0 +1,21 @@
+<div class="footer">
+        
+    </div>
+     <script type="text/javascript">
+        jQuery(function(){
+			setInterval(function(){
+				jQuery("div.footer").html(currentTime());
+			},1000);
+        });
+      //显示当前时间
+        function currentTime(){ 
+        			    var d=new Date(),str='Copyright © 2015 上海尤恩信息技术有限公司        '; 
+        			    str+=d.getFullYear()+'年'; 
+        			    str+=d.getMonth() + 1+'月'; 
+        			    str+=d.getDate()+'日'; 
+        			    str+=d.getHours()+'时'; 
+        			    str+=d.getMinutes()+'分'; 
+        			    str+= d.getSeconds()+'秒'; 
+        			    return str; 
+        }
+        </script>

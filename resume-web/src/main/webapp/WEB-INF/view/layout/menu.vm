@@ -1,0 +1,18 @@
+<link type="text/css" rel="stylesheet" href="#getJsPath('easyui/themes/bootstrap/custom.menu.icon.css')"/>
+<script type="text/javascript" src="#getJsPath('jquery/jquery.menu.ext.js')"></script>
+<div class="easyui-accordion" data-options="fit:true,border:false">
+	#foreach($item in $modeNodeList)
+		#if($!{item.children}) 
+		 <div id="uen_master_$!{item.id}" title="$!{item.text}" style="padding:0;">
+            <ul id="uen_tree_cluster_$!{item.id}" class="easyui-tree" data-options="animate: true,lines:true,onClick: function(node){addNewTab(node)}"></ul>
+        </div>
+		#end 
+	#end
+	<script>
+		#foreach($item in $!modeNodeList)
+			#if($!{item.children})
+				$('#uen_tree_cluster_${item.id}').tree({data:$!{item.children}});
+			#end
+		 #end
+	</script>
+    </div>

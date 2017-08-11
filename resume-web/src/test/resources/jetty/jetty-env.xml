@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure id="wac" class="org.mortbay.jetty.webapp.WebAppContext">
+
+	<New id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+		<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+
+		<Set name="url">jdbc:mysql://chenbingtom.com:3306/uenpay_account?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;useSSL=true</Set>
+		<Set name="username">root</Set>
+		<Set name="password">my19921028sql</Set>
+
+		<Set name="maxActive">2</Set>
+		<Set name="maxIdle">2</Set>
+	</New>
+
+	<New id="datasource_Datasource" class="org.mortbay.jetty.plus.naming.EnvEntry">
+		<Arg>jdbc/resume-mysql</Arg>
+		<Arg>
+			<Ref id="datasource" />
+		</Arg>
+	</New>
+</Configure>
