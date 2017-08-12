@@ -1,3 +1,3 @@
-<link type="text/css" rel="stylesheet" href="#getJsPath('easyui/themes/icon.css')"/>
-<link type="text/css" rel="stylesheet" href="#getJsPath('easyui/themes/default/easyui.css')"/>
-<link type="text/css" rel="stylesheet" href="#getCssPath('layout.css')"/>
+<link type="text/css" rel="stylesheet" href="#getCssPath('style.css')"/>
+<link type="text/css" rel="stylesheet" href="#getCssPath('bootstrap.css')"/>
+<link type="text/css" rel="stylesheet" href="#getCssPath('font-awesome.css')"/>
