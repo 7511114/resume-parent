@@ -364,7 +364,7 @@ ul.top-links li a i.fa-google-plus:hover{
  position: relative;
     margin-bottom: 10.6em;
 }*/
-.banner-btm-grid-w3ls {
+.banner-btm-grid-bing {
     position: absolute;
     width: 70%;
     top: 31em;
@@ -373,13 +373,15 @@ ul.top-links li a i.fa-google-plus:hover{
 .banner-left-wthree {
     float: left;
     width: 49%;
-    background: #0c0c0c;
+   /* background: #0c0c0c;*/
+     background: #04285a;
     padding: 30px 50px;
 }
 .banner-right-w3-agileits {
     float: right;
     width: 49%;
-    background: #000;
+    /*background: #000;*/
+    background:#052e64;
     padding: 1em;
 }
 .banner-left-wthree img {
@@ -429,8 +431,8 @@ ul.address-text b {
 .about,.experience,.projects,.contact{
 	padding:100px 0px;
 }
-h4.title-w3ls {
-    color: #000;
+h4.title-bing {
+    color: #004894;
     letter-spacing: 1px;
     font-size: 28px;
     text-transform: uppercase;
@@ -650,7 +652,7 @@ h5.sub {
 .experience {
     padding-top: 0px!important;
 }
-.experience h4.title-w3ls {
+.experience h4.title-bing {
     margin-bottom: 20px;
 }
 /*--//work--*/
@@ -998,7 +1000,7 @@ a.lightbox img:hover {
 	.header {
 		padding: 4em 0 9em;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		left: 14em;
 	}
 	.name h2 {
@@ -1021,7 +1023,7 @@ a.lightbox img:hover {
 	.banner-left-wthree {
 		padding: 30px 45px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		width: 72%;
 		top: 29em;
 		left: 12.58em;
@@ -1046,7 +1048,7 @@ a.lightbox img:hover {
 	.about, .experience, .projects, .contact {
 		padding: 80px 0px;
 	}
-	h4.title-w3ls {
+	h4.title-bing {
 		font-size: 26px;
 		margin-bottom: 42px;
 	}
@@ -1069,7 +1071,7 @@ a.lightbox img:hover {
 	.container.banner-drop.nav-open {
 		margin-top: 7em;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		width: 76%;
 		top: 27em;
 		left: 9.8em;
@@ -1123,7 +1125,7 @@ a.lightbox img:hover {
 	ul.address li ul.address-text li {
 		font-size: 13px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		width: 83%;
 		top: 25.5em;
 		left: 5.8em;
@@ -1210,7 +1212,7 @@ a.lightbox img:hover {
 		margin: 4px 0 13px;
 		letter-spacing: 9px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		width: 83%;
 		top: 22.5em;
 		left: 5.7em;
@@ -1231,7 +1233,7 @@ a.lightbox img:hover {
 		left: 19.5%;
 		top: -22.5%;
 	}
-	h4.title-w3ls {
+	h4.title-bing {
 		font-size: 24px;
 		margin-bottom: 38px;
 	}
@@ -1261,7 +1263,7 @@ a.lightbox img:hover {
 	ul.address {
 		margin-top: 1.4em;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		width: 80%;
 		top: 20.8em;
 		left: 6.5em;
@@ -1307,7 +1309,7 @@ a.lightbox img:hover {
 		background: url(../images/banner.jpg) no-repeat -26px 0px;
 		background-size: cover;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 19em;
 		left: 8em;
 		width: 74%;
@@ -1374,7 +1376,7 @@ a.lightbox img:hover {
 	}
 }
 @media(max-width:900px){
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 19em;
 		left: 5em;
 		width: 82%;
@@ -1395,7 +1397,7 @@ a.lightbox img:hover {
 	.header {
 		padding: 2em 0 5em;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 17.5em;
 	}
 	.banner {
@@ -1407,7 +1409,7 @@ a.lightbox img:hover {
 	.banner-right-w3-agileits iframe {
 		height: 265px;
 	}
-	h4.title-w3ls {
+	h4.title-bing {
 		font-size: 23px;
 		margin-bottom: 36px;
 	}
@@ -1420,7 +1422,7 @@ a.lightbox img:hover {
 	
 }
 @media(max-width:800px){
-	h4.title-w3ls {
+	h4.title-bing {
 		font-size: 21px;
 		margin-bottom: 36px;
 	}
@@ -1434,7 +1436,7 @@ a.lightbox img:hover {
 	.banner-left-wthree img {
 		width: 40%;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		left: 2em;
 		width: 92%;
 	}
@@ -1516,7 +1518,7 @@ a.lightbox img:hover {
 	.banner-left-wthree {
 		padding: 26px 24px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 16em;
 	}
 	.banner {
@@ -1525,7 +1527,7 @@ a.lightbox img:hover {
 		margin-bottom: 12.45em;
 		min-height: 355px;
 	}
-	h4.title-w3ls {
+	h4.title-bing {
 		font-size: 19px;
 	}
 	span.about-top-w3 {
@@ -1539,7 +1541,7 @@ a.lightbox img:hover {
 	.header-right nav {
 		left: 13.5%;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		left: 4.2em;
 		width: 80%;
 	}
@@ -1591,7 +1593,7 @@ a.lightbox img:hover {
 		margin-bottom: 32.9em;
 		min-height: 348px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		left: 4em;
 	}
 }
@@ -1609,14 +1611,14 @@ a.lightbox img:hover {
 		font-size: 23px;
 		letter-spacing: 2px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 14.8em;
 	}
 	.banner {
 		margin-bottom: 32.4em;
 		min-height: 327px;
 	}
-	h4.title-w3ls {
+	h4.title-bing {
 		margin-bottom: 30px;
 	}
 	.news-right a h4 {
@@ -1666,7 +1668,7 @@ a.lightbox img:hover {
 		letter-spacing: 5px;
 		font-size: 12px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 14em;
 		left: 3.5em;
 	}
@@ -1747,7 +1749,7 @@ a.lightbox img:hover {
 		height: 32px;
 		font-size: 14px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 12em;
 		left: 3em;
 	}
@@ -1853,7 +1855,7 @@ a.lightbox img:hover {
 		margin-bottom: 28.45em;
 		min-height: 240px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 11.5em;
 		left: 1.56em;
 		width: 88%;
@@ -1900,7 +1902,7 @@ a.lightbox img:hover {
 	.header-right nav ul li {
 		width: 90%;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 10.8em;
 		left: 1.4em;
 	}
@@ -1914,7 +1916,7 @@ a.lightbox img:hover {
 		font-size: 13px;
 		line-height: 28px;
 	}
-	h4.title-w3ls {
+	h4.title-bing {
 		font-size: 18px;
 	}
 	.banner {
@@ -1983,7 +1985,7 @@ a.lightbox img:hover {
 		font-size: 13px;
 		line-height: 27px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 10.4em;
 	}
 	.banner {
@@ -2029,7 +2031,7 @@ a.lightbox img:hover {
 	.logo h1 a {
 		font-size: 27px;
 	}
-	.banner-btm-grid-w3ls {
+	.banner-btm-grid-bing {
 		top: 9.1em;
 		left: .7em;
 		width: 93%;

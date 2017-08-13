@@ -107,5 +107,6 @@
 
 	<welcome-file-list>
 		<welcome-file>index</welcome-file>
+		<welcome-file>/</welcome-file>
 	</welcome-file-list>
 </web-app>

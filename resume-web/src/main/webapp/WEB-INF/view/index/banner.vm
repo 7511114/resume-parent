@@ -1,0 +1,93 @@
+	<div class="banner-figures">
+		<div class="banner">
+			<div class="container banner-drop">
+				<div class="header">
+					<div class="header-left logo">
+						<h1><a href="index.html">工作经历</a></h1>
+					</div>
+					<div class="header-right">
+						<nav>
+						  <ul>
+							<li class="active">
+								<a href="index.html" class="active"><span>首页</span></a>
+							</li>
+							<li>
+								<a href="#about" class="scroll"><span>关于我</span></a>
+							</li>
+							<li>
+								<a href="#experience" class="scroll"><span>经历</span></a>
+							</li>
+							<li>
+								<a href="#projects" class="scroll"><span>项目</span></a>
+							</li>
+							<li>
+								<a href="#contact" class="scroll"><span>联系我</span></a>
+							</li>
+						  </ul>
+						</nav>
+						<div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms"><span></span></div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="name" >
+					<h2>陈 兵</h2>
+					<p> Web 设计 和 开发者</p>
+				</div>
+				<div class="social-icons animated wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="800ms">
+					<ul class="top-links">
+						<li><a href="javascript:alert('不要点我');"><i class="fa fa-bar-chart"></i></a></li>
+						<li><a href="javascript:alert('不要点我');"><i class="fa fa-github"></i></a></li>
+						<li><a href="javascript:alert('不要点我');"><i class="fa fa-desktop"></i></a></li>
+						<li><a href="javascript:alert('不要点我');"><i class="fa fa-phone"></i></a></li>
+					</ul>
+				</div>
+			</div>
+							<div class="banner-btm-grid-bing">
+		<div class="banner-left-wthree">
+			<img src="resources/images/banner-btm.jpg" alt=" " class="img-responsive">
+			<ul class="address">
+					
+					<li>
+							<ul class="address-text">
+								<li><b>姓名</b></li>
+								<li>: 陈兵</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>出生日期</b></li>
+								<li>: 1992-10-28</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>地址 </b></li>
+								<li>: 上海市</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>QQ-邮箱 </b></li>
+								<li><a href="mailto:7511114@qq.com">: 7511114@qq.com</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+		</div>
+		<div class="banner-right-w3-agileits">
+			<iframe src="video/myVideo"></iframe>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+		</div>
+		<script>
+				(function($){
+				  $(".menu-icon").on("click", function(){
+						$(this).toggleClass("open");
+						$(".container").toggleClass("nav-open");
+						$("nav ul li").toggleClass("animate");
+				  });
+				  
+				})(jQuery);
+			</script>
+	</div>

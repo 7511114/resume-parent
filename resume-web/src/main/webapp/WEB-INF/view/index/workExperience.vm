@@ -1,0 +1,58 @@
+
+<div id="experience" class="experience">
+	<div class="container">
+		<span class="about-top-w3">Web 开发者</span>
+		<h4 class="title-w3ls">工作 经历</h4>
+		<div class="work-info">
+			<div class="col-md-6 work-left">
+				<h4>2017 - 至今</h4>
+			</div>
+			<div class="col-md-6 work-right">
+				<h5>
+					<span class="glyphicon glyphicon-briefcase"> </span> java 架构师
+				</h5>
+				<p>架构师是一个充满挑战的职业,知识面的宽窄往往决定着一个架构师的架构能力，并且需要解决一些问题的解决方案</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="work-info">
+			<div class="col-md-6 work-right work-right2">
+				<h4>2016 - 2017</h4>
+			</div>
+			<div class="col-md-6 work-left work-left2">
+				<h5>
+					项目经理 <span class="glyphicon glyphicon-briefcase">
+					</span>
+				</h5>
+				<p>主要负责项目任务的人员分配，负责文档的编写，项目进度的跟踪，数据库的设计，以及核心代码的编写,帮助团队解决问题和培训</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="work-info">
+			<div class="col-md-6 work-left">
+				<h4>2015 - 2016</h4>
+			</div>
+			<div class="col-md-6 work-right">
+				<h5>
+					<span class="glyphicon glyphicon-briefcase"> </span> java 高级开发工程师
+				</h5>
+				<p>负责项目的搭建和数据库的设计，以及核心代码的编写，协助团队解决问题</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="work-info">
+			<div class="col-md-6 work-right work-right2">
+				<h4>2013 - 2015</h4>
+			</div>
+			<div class="col-md-6 work-left work-left2">
+				<h5>
+					java 工程师 <span class="glyphicon glyphicon-briefcase">
+					</span>
+				</h5>
+				<p>负责项目的CRUD以及页面的编写，按时完成项目经理分配的任务</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//work-experience-->

@@ -1,5 +1,4 @@
 <script type="text/javascript" src="#getJsPath('jquery-2.1.4.min.js')"></script>
-<script type="text/javascript" src="#getJsPath('bootstrap.js')"></script>
-<script type="text/javascript" src="#getJsPath('bars.js')"></script>
-<script type="text/javascript" src="#getJsPath('easing.js')"></script>
+<!-- start-smooth-scrolling -->
 <script type="text/javascript" src="#getJsPath('move-top.js')"></script>
+<script type="text/javascript" src="#getJsPath('easing.js')"></script>

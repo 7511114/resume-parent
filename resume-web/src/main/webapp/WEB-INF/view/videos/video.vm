@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="#getJsPath('video/html5media.min.js')"></script>
+</head>
+
+<body style="width:100%;height:300px;margin:0px;padding:0px">
+<video poster="../resources/images/videoimage.jpg" style="width:100%;height:296px;margin:0px;padding:0px" controls="controls" >
+			<source src="../resources/videos/movie.mp4" media="all"></source>
+		</video>
+</body>
+</html>

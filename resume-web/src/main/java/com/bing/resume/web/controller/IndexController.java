@@ -22,7 +22,7 @@ public class IndexController {
 	@RequestMapping(value={"index",""},method=RequestMethod.GET)
 	public String index(Model model,HttpSession session){
 		model.addAttribute("page_title", pageTitle);
-		return "layout/index";
+		return "index/index";
 	}
 	
 	

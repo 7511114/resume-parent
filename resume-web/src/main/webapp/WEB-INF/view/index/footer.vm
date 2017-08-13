@@ -1,0 +1,16 @@
+
+<div class="footer">
+	<div class="container">
+		<p>© 2017 简简单单之经历(｀･ω･´) | 架构之美</p>
+	</div>
+</div>
+##here stars scrolling icon
+<script type="text/javascript" src="#getJsPath('bars.js')"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({
+			easingType : 'easeOutQuart'
+		});
+
+	});
+</script>
